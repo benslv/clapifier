@@ -6,12 +6,16 @@
     </head>
 
     <body>
-        <input type="text" name="input_text" id="input_text" placeholder="Enter your boring, old text here...">
-        <br>
-        <button type="clapify_button" onclick="clapify(document.getElementById('input_text').value)">Clapify!</button>
-        <br>
-        <input type="text" name="output_text" id="output_text" placeholder="...and out will pop your glorious, clapified text!">
+        <div id="main-content">
+            <h1>👏 The Clapifier 👏</h1>
+            <p>Enter your text in the box below, click the button, and watch the magic happen!</p>
 
+            <textarea type="text" id="input_text" cols="40" rows="5" placeholder="Enter your boring, old text here..."></textarea>
+            <br>
+            <button type="clapify_button" onclick="clapify(document.getElementById('input_text').value)">Clapify!</button>
+            <br>
+            <textarea type="text" id="output_text" cols="40" rows="5" placeholder="...and out will pop your glorious, clapified text!"></textarea>
+        </div>
         <script type="text/javascript">
             function clapify(user_input) {
                 user_input = user_input.replace(/\s/g, " 👏 ");
