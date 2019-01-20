@@ -2,7 +2,7 @@ textarea {
     width: 50%;
     padding: 12px;
     margin: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -21,5 +21,5 @@ button {
 }
 
 button:hover {
-    background-color: #c3c3c3
+    background-color: #c3c3c3;
 }
