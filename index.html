@@ -12,7 +12,11 @@
 
             <textarea type="text" id="input_text" cols="30" rows="11" oninput="makeChanges()" placeholder="Enter your boring, old text here..."></textarea>
             <br>
+            <br>
             <textarea type="text" id="output_text" cols="30" rows="11" onclick="copyToClipboard()" readonly placeholder="...and out will pop your glorious, clapified text!"></textarea>
+            <p id="message">
+                Click the box above to copy your clapified text!
+            </p>
         </div>
         <script type="text/javascript">
             function makeChanges() {
@@ -32,7 +36,7 @@
             }
 
             function copyToClipboard() {
-                var text = document.getElementById("output_text").value;
+                var text = document.getElementById("output_text");
                 text.select();  
                 document.execCommand("copy");
                 document.getElementById("message").innerText = "Copied to clipboard! 👏";
