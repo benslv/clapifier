@@ -1,46 +1,64 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>👏👏👏</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+	<head>
+		<meta charset="UTF-8" />
+		<title>👏👏👏</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
 
-    <body>
-        <div id="main-content">
-            <h1>👏 The Clapifier 👏</h1>
-            <p>Type your text in the box below, and watch the magic happen!</p>
+	<body>
+		<div id="main-content">
+			<h1>👏 The Clapifier 👏</h1>
+			<p>Type your text in the box below, and watch the magic happen!</p>
 
-            <textarea type="text" id="input_text" cols="30" rows="11" oninput="makeChanges()" placeholder="Enter your boring, old text here..."></textarea>
-            <br>
-            <br>
-            <textarea type="text" id="output_text" cols="30" rows="11" onclick="copyToClipboard()" readonly placeholder="...and out will pop your glorious, clapified text!"></textarea>
-            <p id="message">
-                Click the box above to copy your clapified text!
-            </p>
-        </div>
-        <script type="text/javascript">
-            function makeChanges() {
-                var text = document.getElementById("input_text").value;
-                var spoilers = ""
+			<textarea
+				type="text"
+				id="input_text"
+				cols="30"
+				rows="11"
+				oninput="makeChanges()"
+				placeholder="Enter your boring, old text here..."
+			></textarea>
+			<br />
+			<br />
+			<textarea
+				type="text"
+				id="output_text"
+				cols="30"
+				rows="11"
+				onclick="copyToClipboard()"
+				readonly
+				placeholder="...and out will pop your glorious, clapified text!"
+			></textarea>
+			<p id="message">
+				Click the box above to copy your clapified text!
+			</p>
+		</div>
+		<script type="text/javascript">
+			function makeChanges() {
+				var text = document.getElementById("input_text").value;
+				var spoilers = "";
 
-                for (let i = 0; i < text.length; i++) {
-                    if (text.charAt(i) == " "){
-                        spoilers += " 👏 ";
-                    }
-                    else {
-                        spoilers += text.charAt(i);
-                    }
-                }
+				for (let i = 0; i < text.length; i++) {
+					if (text.charAt(i) == " ") {
+						spoilers += " 👏 ";
+					} else {
+						spoilers += text.charAt(i);
+					}
+				}
 
-                document.getElementById("output_text").value = spoilers;
-            }
+				document.getElementById("output_text").value = spoilers;
+			}
 
-            function copyToClipboard() {
-                var text = document.getElementById("output_text");
-                text.select();  
-                document.execCommand("copy");
-                document.getElementById("message").innerText = "Copied to clipboard! 👏";
-            }
-        </script>
-    </body>
+			function copyToClipboard() {
+				var text = document.getElementById("output_text");
+				text.select();
+				document.execCommand("copy");
+				document.getElementById("message").innerText = "Copied to clipboard! 👏";
+			}
+		</script>
+	</body>
 </html>
